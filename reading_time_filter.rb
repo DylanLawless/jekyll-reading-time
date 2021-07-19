@@ -25,20 +25,20 @@ module ReadingTimeFilter
     # Calculate reading time.
     case total_words
     when 0 .. 89
-      return "30 #{second_plural}"
+      return "Reading time 30 #{second_plural}"
     when 90 .. 269
-      return "1 #{minute_singular}"
+      return "Reading time 1 #{minute_singular}"
     when 230 .. 449
-      return "2 #{minute_plural}"
+      return "Reading time 2 #{minute_plural}"
     when 450 .. 629
-      return "3 #{minute_plural}"
+      return "Reading time 3 #{minute_plural}"
     when 630 .. 809
-      return "4 #{minute_plural}"
+      return "Reading time 4 #{minute_plural}"
     when 810 .. 990
-      return "5 #{minute_plural}"
+      return "Reading time 5 #{minute_plural}"
     else
       minutes = ( total_words / words_per_minute ).floor
-      return "#{minutes} #{minute_plural}";
+      return "Reading time  #{minutes} #{minute_plural}";
     end
   end
 
